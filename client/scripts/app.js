@@ -17,11 +17,11 @@ var App = {
 
   },
 
+  // calls data from network
   fetch: function(callback = ()=>{}) {
     Parse.readAll((data) => {
       // examine the response from the server request:
-      console.log(data);
-
+      window.Messages.data = data.results;
       callback();
     });
   },
@@ -34,5 +34,6 @@ var App = {
   stopSpinner: function() {
     App.$spinner.fadeOut('fast');
     FormView.setStatus(false);
+    MessagesView.render();
   }
 };
