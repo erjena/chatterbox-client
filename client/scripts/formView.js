@@ -20,13 +20,13 @@ var FormView = {
         Parse.readAll((data) => {
           // examine the response from the server request:
           window.Messages.data = data.results;
+          window.location.reload();
         })
       },
       function (data) {
         // See: https://developer.mozilla.org/en-US/docs/Web/API/console.error
         console.error('chatterbox: Failed to send message', data);
       });
-    //location.reload();
   },
 
   setStatus: function (active) {
