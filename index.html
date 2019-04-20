@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>chatterbox</title>
+    <title>Chatter Box</title>
     <link rel="stylesheet" href="client/styles/styles.css">
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/underscore/underscore.js"></script>
@@ -23,11 +23,14 @@
   </head>
   <body>
     <div id="main">
-      <h1>chatterbox</h1>
+      <h1>Chatter Box</h1>
       <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
       <div id="rooms">
         Room:
-        <select></select>
+        <select class="select" id="select">
+          <option>All Rooms</option>
+        </select>
+
         <button>Add Room</button>
       </div>
       <form action="#" id="send" method="post">
@@ -45,6 +48,7 @@
     <script src="client/scripts/roomsView.js"></script>
     <script src="client/scripts/messageView.js"></script>
     <script src="client/scripts/messagesView.js"></script>
+    <script src="client/scripts/roomView.js"></script>
     <script src="client/scripts/app.js"></script>
     <script>
       $(() => App.initialize());

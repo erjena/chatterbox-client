@@ -22,6 +22,7 @@ var App = {
     Parse.readAll((data) => {
       // examine the response from the server request:
       window.Messages.data = data.results;
+      window.Rooms.data = data.results;
       callback();
     });
   },
@@ -35,5 +36,6 @@ var App = {
     App.$spinner.fadeOut('fast');
     FormView.setStatus(false);
     MessagesView.render();
+    RoomsView.render();
   }
 };
