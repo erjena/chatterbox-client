@@ -1,18 +1,16 @@
-var thisRoom;
+
 
 var MessagesView = {
 
   $chats: $('#chats'),
+  $friend: $('.username'),
 
   initialize: function() {
-    var selectElem = document.getElementById('select');
-    var pElem = document.getElementById('p');
-    selectElem.addEventListener('change', function() {
-      $('#chats').empty();
-      var index = selectElem.selectedIndex;
-      thisRoom = document.getElementById("select").value;
-      MessagesView.render();
-    })
+    $("body").on('click', '#specificUser', function() {
+      var getFriend = document.getElementById("specificUser");
+      Friends['Friend ' + getFriend.innerHTML] = getFriend.innerHTML;
+      alert("Friend added!!!!");
+    });
   },
 
   render: function() {

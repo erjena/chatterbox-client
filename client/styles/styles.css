@@ -49,6 +49,12 @@ body {
     line-height: 13px;
 }
 
+h6 {
+    font-size: 12px;
+    padding: 0px;
+    margin: 10px 1px 1px 1px;
+}
+
 form {
     padding: 20px;
     padding-left: 0;
@@ -60,6 +66,10 @@ form input[type=text] {
     width: 70%;
     font-size: 12px;
     padding: 5px;
+}
+
+.newRoom {
+    padding: 1px;
 }
 
 #chats {

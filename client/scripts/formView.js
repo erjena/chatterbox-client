@@ -10,9 +10,9 @@ var FormView = {
     // Stop the browser from submitting the form
     event.preventDefault();
 
-    var msg = $("input:first").val();
+    var msg = $('input[name="message"]').val();
     var user = window.location.search.substr(10);
-    var roomName = 'Our room';
+    var roomName = $('input[name="room"]').val();
     var oneMessage = { username: user, text: msg, roomname: roomName };
     Parse.create(oneMessage,
       function (data) {
